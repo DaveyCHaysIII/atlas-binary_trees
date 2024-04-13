@@ -11,21 +11,9 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
-
-	return (numLeaves(tree));
-}
-
-/**
- * numLeaves()- recursive answer to binary_tree_leaves
- * @tree: the exact same as above
- *
- * Return: number of leaves
- */
-
-size_t numLeaves(const binary_tree_t *tree)
-{
-	if (!tree)
+	if (!tree->left && !tree->right)
 		return (1);
 
-	return (numLeaves(tree->left) + numLeaves(tree->right));
+	return (binary_tree_leaves(tree->left) + binary_tree_leaves(tree->right));
 }
+
