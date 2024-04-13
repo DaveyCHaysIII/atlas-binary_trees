@@ -1,4 +1,6 @@
 #include "binary_trees.h"
+#include "11-binary_tree_size.c"
+#include "12-binary_tree_leaves.c"
 
 /**
  * binary_tree_nodes()- returns num nodes with at least 1 child
