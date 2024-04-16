@@ -1,4 +1,4 @@
-#include "binary_trees.c"
+#include "binary_trees.h"
 #include "9-binary_tree_height.c"
 #include "11-binary_tree_size.c"
 
