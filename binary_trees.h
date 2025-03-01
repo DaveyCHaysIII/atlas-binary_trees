@@ -30,6 +30,17 @@ typedef struct binary_tree_s avl_t;
 
 typedef struct binary_tree_s heap_t;
 
+typedef struct queue_node
+{
+	binary_tree_t *node;
+	struct queue_node *next;
+} queue_node_t;
+
+typedef struct queue
+{
+	queue_node_t *front, *rear;
+} queue_t;
+
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
