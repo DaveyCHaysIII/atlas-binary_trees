@@ -7,8 +7,11 @@ void enqueue(queue_t *q, const binary_tree_t *node);
 queue_t *create_queue(void);
 
 /**
+ * binary_tree_levelorder - prints the level order of a binary tree
+ * @tree: the tree in question
+ * @func: the function pointer
  *
- *
+ * Return: no return
  */
 
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
@@ -36,8 +39,9 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 
 
 /**
+ * create_queue - create a queue
  *
- *
+ * Return: the queue
  */
 
 queue_t *create_queue(void)
@@ -50,8 +54,11 @@ queue_t *create_queue(void)
 }
 
 /**
+ * enqueue - enqueue's a thing
+ * @q: the queue
+ * @node: the binary tree node to enqueue
  *
- *
+ * Return: no return
  */
 
 void enqueue(queue_t *q, const binary_tree_t *node)
@@ -75,8 +82,10 @@ void enqueue(queue_t *q, const binary_tree_t *node)
 }
 
 /**
+ * dequeue - dequeue's a thing
+ * @q: the queue in question
  *
- *
+ * Return: a new binary_tree_t
  */
 
 const binary_tree_t *dequeue(queue_t *q)
@@ -99,8 +108,10 @@ const binary_tree_t *dequeue(queue_t *q)
 }
 
 /**
+ * is_empty - determines if a queue is empty
+ * @q: the queue in queuestion (hah!)
  *
- *
+ * return: 0 or 1, whichever is true/false
  */
 
 int is_empty(queue_t *q)
