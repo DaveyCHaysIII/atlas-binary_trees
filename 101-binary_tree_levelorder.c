@@ -20,12 +20,12 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 	if (!tree || !func)
 		return;
 
-	q =create_queue();
+	q = create_queue();
 	enqueue(q, tree);
 
 	while (!is_empty(q))
 	{
-	 	current = dequeue(q);
+		current = dequeue(q);
 		func(current->n);
 
 		enqueue(q, current->left);
@@ -105,5 +105,5 @@ const binary_tree_t *dequeue(queue_t *q)
 
 int is_empty(queue_t *q)
 {
-	return q->front == NULL;
+	return (q->front == NULL);
 }
