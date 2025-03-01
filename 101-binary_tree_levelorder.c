@@ -111,7 +111,7 @@ const binary_tree_t *dequeue(queue_t *q)
  * is_empty - determines if a queue is empty
  * @q: the queue in queuestion (hah!)
  *
- * return: 0 or 1, whichever is true/false
+ * Return: 0 or 1, whichever is true/false
  */
 
 int is_empty(queue_t *q)
