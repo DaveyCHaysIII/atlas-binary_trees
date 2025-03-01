@@ -2,9 +2,9 @@
 
 
 int is_empty(queue_t *q);
-const binary_tree_t *dequeue(queue_t *q)
-void enqueue(queue_t *q, const binary_tree_t *node)
-queue_t *create_queue(void)
+const binary_tree_t *dequeue(queue_t *q);
+void enqueue(queue_t *q, const binary_tree_t *node);
+queue_t *create_queue(void);
 
 /**
  *
