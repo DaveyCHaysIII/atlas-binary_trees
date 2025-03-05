@@ -26,10 +26,9 @@ avl_t *avl_insert(avl_t **tree, int value)
 		{
 			new_node = binary_tree_node(*tree, value);
 			(*tree)->left = new_node;
-			rotate((*tree)->parent, value);
-			return (new_node);
 		}
-		return (avl_insert(&(*tree)->left, value));
+		else
+		       new_node = (avl_insert(&(*tree)->left, value));
 	}
 	else if (value > (*tree)->n)
 	{
@@ -37,11 +36,12 @@ avl_t *avl_insert(avl_t **tree, int value)
 		{
 			new_node = binary_tree_node((*tree), value);
 			(*tree)->right = new_node;
-			rotate((*tree)->parent, value);
-			return (new_node);
 		}
-		return (avl_insert(&(*tree)->right, value));
+		else
+		       new_node = (avl_insert(&(*tree)->right, value));
 	}
+	else
+		return (NULL);
 
 	*tree = rotate((*tree), value);
 
