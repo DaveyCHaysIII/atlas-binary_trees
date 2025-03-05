@@ -39,7 +39,6 @@ avl_t *sarr_to_avl_func(int *array, int start, int end, avl_t *parent)
 		return (NULL);
 
 	mid = (start + end) / 2;
-	printf("array[mid]: %d\n", array[mid]);
 	root = binary_tree_node(parent, array[mid]);
 
 	root->left = sarr_to_avl_func(array, start, mid - 1, root);
